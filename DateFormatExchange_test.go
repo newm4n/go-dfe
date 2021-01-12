@@ -33,7 +33,7 @@ func TestGoToJava(t *testing.T) {
 	tests = append(tests, NewConvertTest("Mon, 02 Jan 2006 15:04:05 MST", "EEE, dd MMM yyyy HH:mm:ss Z"))
 	tests = append(tests, NewConvertTest("Mon, 02 Jan 2006 15:04:05 -0700", "EEE, dd MMM yyyy HH:mm:ss XX"))
 	tests = append(tests, NewConvertTest("2006-01-02T15:04:05Z07:00", "yyyy-MM-ddTHH:mm:ss'Z'XXX"))
-	tests = append(tests, NewConvertTest("2006-01-02T15:04:05.999999999Z07:00", "yyyy-MM-ddTHH:mm:ss.999999999'Z'XXX"))
+	tests = append(tests, NewConvertTest("2006-01-02T15:04:05.999999999Z07:00", "yyyy-MM-ddTHH:mm:ss.SSS'Z'XXX"))
 	tests = append(tests, NewConvertTest("3:04PM", "K:mmaa"))
 	// Handy time stamps.
 	tests = append(tests, NewConvertTest("Jan _2 15:04:05", "MMM _d HH:mm:ss"))
@@ -62,6 +62,7 @@ func TestJavaToGo(t *testing.T) {
 	tests = append(tests, NewConvertTest("EEEE, dd MMM yyyy HH:mm:ss", "Monday, 02 Jan 2006 15:04:05"))
 	tests = append(tests, NewConvertTest("EEE, dd MMM yyyy HH:mm:ss aa", "Mon, 02 Jan 2006 15:04:05 PM"))
 	tests = append(tests, NewConvertTest("EEE, dd MMM yyyy HH:mm:ssaa", "Mon, 02 Jan 2006 15:04:05PM"))
+	tests = append(tests, NewConvertTest("yyyy-MM-ddTHH:mm:ss.SSSXXX", "2006-01-02T15:04:05.999999999-07:00"))
 
 	pt := NewPatternTranslation()
 

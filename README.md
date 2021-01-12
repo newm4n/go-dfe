@@ -119,6 +119,7 @@ Thus the following mapping can be created between golang and java date format.
 | `stdZeroMinute` | `04` | `mm` | 
 | `stdSecond` | `5` | `s` | 
 | `stdZeroSecond` | `05` | `ss` | 
+| `stdFracSecond9` | `999999999` | `SSS` | 
 | `stdLongYear` | `2006` | `yyyy` | 
 | `stdYear` | `06` | `yy` | 
 | `stdPM` | `PM` | `aa` | 
