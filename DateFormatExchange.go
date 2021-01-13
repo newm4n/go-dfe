@@ -57,6 +57,7 @@ func NewPatternTranslation() *PatternTranslation {
 			newFormatMapping("-07", "X", false),
 			newFormatMapping("-07:00", "XXX", false),
 			newFormatMapping("-07:00:00", "XXX", true),
+			newFormatMapping("999999999", "SSS", false),
 		},
 	}
 	return ret
